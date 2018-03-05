@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cartoon</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="images/bitbug_favicon.ico" rel="shortcut icon">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+   
+            <header>
+                    <div class="round">動</div>
+                    <div class="line">
+                        <marquee direction="right">...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...</marquee>
+                        <marquee direction="left">...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...+...</marquee>
+                    </div>
+                </header>
+                <footer>
+                 <div class="line_1"></div>
+                 <div class="line_2">
+                     BGM - 紅蓮の弓矢 
+                    <!-- <audio src="audio/紅蓮の弓矢.mp3" controls="controls"loop="loop" preload="auto" autoplay>客官，你的浏览器不支持音乐哦</audio> -->
+                 </div>
+                 <div class="play">
+                     <audio id="playBtn" src="audio/紅蓮の弓矢.mp3" loop="loop" autoplay></audio>
+                 </div>
+                 <div class="cidai"></div>
+                </footer>
+   <div class="wrap"></div>       
+   </div>   
+</body>
+<script>
+    var owrap = document.getElementsByClassName('wrap')[0];
+    var oline_1 = document.getElementsByClassName('line_1')[0];
+    var arrimg = ['Kaneziki.png','Human.jpg','Alen.jpg','Sakura.png','Aina.png','Satsuki.png',
+    'Kazuya.jpg','Hinata.jpg','Wasabi.jpg','Honoka.png','Kanami.png','BloodCode.jpg','Kaito.jpg','Nozomi.png',
+    'Naoki.png','Riki.jpg','Ryouhei.jpg','Momoka.png','Wakana.jpg','Rufi.jpg','Taizu.jpg','Kakuyi.jpg','Kento.jpg','Sama.jpg'];
+    var i=0;
+    owrap.style.backgroundImage = 'url(images/Kaneziki.png)'; 
+    function time(){
+        if(i>22){
+            i=-1;
+        }        
+        i++;
+        i%22;
+        owrap.style.backgroundImage = 'url(images/'+arrimg[i]+')'; 
+        var num = arrimg[i].indexOf('.');
+        var name = arrimg[i].substring(0,num);
+        oline_1.innerHTML = name;
+    }  
+   setInterval(time,500)
+    //播放器   JQ
+    var audio = document.getElementById('playBtn');
+    $('.play').eq(0).click(function(){
+        event.stopPropagation();//防止冒泡
+        if(audio.paused){ //如果是暂停状态
+            $('.play').eq(0).css({'background':'url(images/stop.jpg)','background-size':'50px 50px'});
+            audio.play();//播放
+        }else{
+            $('.play').eq(0).css({'background':'url(images/play.jpg)','background-size':'50px 50px'});
+            audio.pause();//停止
+        }
+    })
+    
+</script>
+</html>

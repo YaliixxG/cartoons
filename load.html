@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>loading...</title>
+    <link rel="stylesheet" href="css/load.css">
+    <link href="images/bitbug_favicon.ico" rel="shortcut icon">
+</head>
+<body>
+    <div class="load_wrap">
+        <progress class="load_line" max="100" value="0" id="pg"></progress>
+        <div class="load_count"></div>
+        <audio></audio>
+    </div>
+    <script>
+    var opg =  document.getElementById('pg');
+    var oload_count =  document.getElementsByClassName('load_count')[0];
+    setInterval(function(){
+       if(opg.value != 100) opg.value++;
+       oload_count.innerHTML = opg.value+'%';
+       if(opg.value==100){
+        window.location.href="index.html";
+       }
+    },100)
+       
+    </script>
+</body>
+</html>

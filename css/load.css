@@ -1,0 +1,7 @@
+body{height: 100%;margin: 0;padding: 0;overflow: hidden;}
+
+.load_wrap{width: 1920px;height: 1080px;background: url('../images/load_bg_dark.jpg');position: relative;}
+
+.load_line{width:500px;height: 50px;border: 5px dashed #000;position: absolute;left: 710px;top: 600px;}
+
+.load_count{font-size: 50px;position: absolute;left: 1250px;top: 586px;font-weight: 900;color: #fff;}

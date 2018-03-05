@@ -1,0 +1,63 @@
+body{height: 100%;margin: 0;padding: 0;overflow: hidden;position: relative;}
+.wrap{width: 1920px;height: 1080px;position: absolute;top: 0;left: 0;z-index:-3;}
+header{width: 998px;height: 34px;border: 2px solid #4c5858;margin: 0 auto;background:rgba(57, 57, 57, 0.5);position: relative;}
+header .line{width: 978px;height: 20px;background: #393939;margin: 7px 10px;border-radius:10px; font-size: 18px;color: white;font-weight:bolder;overflow: hidden;letter-spacing: 1em;
+           line-height:20px; }
+header .line marquee{width: 50%;float: left;}
+header .round{width: 34px;height: 34px;background: #4f4f4f;border-radius:50%;position: absolute;top: 0;left: 482px;z-index: 3;line-height: 34px;color: #fff;font-size: 18px;text-align: center; }
+
+footer{width: 998px;height: 60px;border: 2px solid #4c5858;background:rgba(57, 57, 57, 0.5);position: relative;margin: 872px auto;}
+footer .line_1{width: 500px;height: 20px;background: #393939;margin: 7px auto;border-radius:10px; font-size: 18px;color: white;font-weight:bolder;overflow: hidden;letter-spacing: 0.3em;text-align: center;
+    line-height:20px;}
+footer .line_2{width:700px;height: 20px;background: #393939;margin: 7px auto;border-radius:10px; font-size: 18px;color: white;font-weight:bolder;overflow: hidden;letter-spacing: 1em;
+        line-height:20px;text-align: center;}
+footer .play{width: 50px;height: 50px;border-radius: 50%;position: absolute;top: 5px;right: 50px;background: url('../images/stop.jpg');background-size:50px 50px;}
+footer .cidai{width: 122px;height: 60px;background: url('../images/cidai.jpg');background-size: 122px 60px;position: absolute;top:0;left: 6px;}
+
+.wrap{ 
+    -webkit-animation: twinkling 1s infinite ease-in-out 
+    } 
+.animated{ 
+    -webkit-animation-duration: 0.1s; 
+    animation-duration: 0.1s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both 
+    } 
+@-webkit-keyframes twinkling{ 
+    0%{ 
+    opacity: 0.3;
+    left: -10px;
+    }
+    50%{
+        opacity: 1;
+        left: -5px;
+        }
+    75%{
+        opacity: 1;
+        left: 5px;
+        } 
+    100%{
+        opacity: 0.3;
+        left: 0;
+        } 
+        } 
+@keyframes twinkling{ 
+    0%{ 
+        opacity: 0.3;
+        left: -10px;
+        }
+        50%{
+            opacity: 1;
+            left: -5px;
+            }
+        75%{
+                opacity: 1;
+                left: 5px;
+                } 
+        100%{
+            opacity: 0.3;
+        left: 0;
+        } 
+    }
+
+    
